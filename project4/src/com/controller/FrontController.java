@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.*;
+
 import java.lang.reflect.Constructor;
 import java.util.*;
 import javax.servlet.*;
@@ -34,15 +35,14 @@ public class FrontController extends HttpServlet {
 		
 		Properties pro = new Properties();
 		
-		FileInputStream fis = 
-			new FileInputStream("C:\\Users\\user1\\git\\projects\\project4\\src\\com\\controller\\mapping.properties");
+		FileInputStream fis = new FileInputStream("C:\\Users\\user1\\git\\projects\\project4\\src\\com\\controller\\mapping.properties");
 		
 		pro.load(fis);
 		
 		String value = pro.getProperty(command);
 		System.out.println("Value >>> " + value);
 		
-		if(value.substring(0, 7).equals("execute")) {
+		if (value.substring(0, 7).equals("execute")) {
 			StringTokenizer st = 
 					new StringTokenizer(value, "|");
 			
@@ -65,17 +65,17 @@ public class FrontController extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		}else { 
+		} else { 
 			forward = new ActionForward();
 			forward.setRedirect(false);
 			forward.setPath(value);
 		}
 		
 		
-		if(forward != null) {
-			if(forward.isRedirect()) {
+		if (forward != null) {
+			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());
-			}else {
+			} else {
 				RequestDispatcher rd = 
 					request.getRequestDispatcher(forward.getPath());
 				
