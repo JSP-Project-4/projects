@@ -27,6 +27,11 @@
 <link rel="stylesheet" href="CSS/main_style.css">
 <script src="JS/main_java2.js"> </script>
 
+<link rel="stylesheet" href="../CSS/top.css">
+<script src="../JS/main_java2.js"> </script>
+<link rel="stylesheet" href="CSS/top.css">
+<script src="JS/main_java2.js"> </script>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -37,6 +42,7 @@
 
 </head>
 <body>
+<jsp:include page="../include/top.jsp"/>
 	<div id="header">
 	<!-- 검색 영역 코드 ============================================================================ -->
 	<form method="post" action="<%=request.getContextPath() %>/board_search.do"  class="search">
@@ -275,5 +281,6 @@
 		</c:forEach>
 	</c:if>
 	</ul>
+<jsp:include page="../include/bottom.jsp"/>
 </body>
 </html>
