@@ -47,7 +47,12 @@ function searchToggle(obj, evt){
 	           	$("#clickbtn").on("click", function() {
 					var text = $(".search-input").val();
 					
-					location.href="/project4/topSearch.do";
+					
+   					var hostIndex = location.href.indexOf( location.host ) + location.host.length;
+    				var request = location.href.substring( hostIndex, location.href.indexOf('/', hostIndex + 1) );
+
+					
+					location.href=request + "/topSearch.do?content=" + text;
 				});
 	        }
 	        else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
