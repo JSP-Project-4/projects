@@ -13,6 +13,7 @@
 	
 	//====================== loginSelect.jsp =========================
 	$(".member_login").hide();
+	$(".shutdownMemeber").hide();
 	
 	//====================== loginSelet.jsp end =====================
 	
@@ -55,8 +56,10 @@
 			$("#inform").submit();
 		}
 	});	 // $("#signUpbtn")
-	//====================== memberSignUp.jsp end=========================
-
+	//====================== memberSignUp.jsp end========================
+	
+	
+	
 	
 	
 }); //function

@@ -13,12 +13,6 @@
 <head>
 <meta charset="UTF-8">
 <title>여행은 살아보는 거야</title>
-
-<!-- 부트스트랩 -->
-
-<!-- 부트스트랩 End-->
-
-
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
 <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
@@ -79,25 +73,22 @@ $(function() {
 		<div class="search-wrapper">
 		    <div class="input-holder">
 		        <!-- <input type="text" class="search-input" />  -->
-			    <input type="text" class="search-input" name="searchContent" id="searchId">
 		        <button class="search-icon" onclick="searchToggle(this, event);">
-		        
 		        	<span id="clickbtn"></span>
 		        </button>
-		        
-		        
+			    <input type="text" class="search-input" name="searchContent" id="searchId">
 		    </div>
+		    <br>
 		    <span class="close" onclick="searchToggle(this, event);"></span>
-	        <button id="checkinbtn" class="checkbtn">체크인</button>
-        	<button id="checkoutbtn">체크아웃</button>
-        	<button class="checkbtn">여행자</button>
+			<a id="checkinbtn" title="Button border blue/green" class="button btnBorder btnBlueGreen">체크인</a>
+			<a id="checkoutbtn" title="Button border blue/green" class="button btnBorder btnBlueGreen">체크아웃</a>
+			<a  title="Button border blue/green" class="button btnBorder btnBlueGreen">여행자</a>
 	        <br>
-	        <input type="date" id="startDate" name="startDate" required="required" onChange="calcResult(event, 'start')"/>
+	        <input type="date" class="dateposition" id="startDate" name="startDate" required="required" onChange="calcResult(event, 'start')"/>
 	        &nbsp; &nbsp;
-        	<input type="date" id="endDate" name="endDate" required="required" onChange="calcResult(event, 'end')"/>
+        	<input type="date" class="dateposition" id="endDate" name="endDate" required="required" onChange="calcResult(event, 'end')"/>
 		</div>
 	</div>
- 	
 	<a href="<%=request.getContextPath() %>/house_list.do"><div id="logo_loction"></div></a>
 	
 	<!-- 22-11-08 변경된 부분 (비로그인시 숙소호스팅하기 링크 클릭하면 로그인 모달창이 뜨게 변경함) =============================================================== -->
@@ -110,7 +101,7 @@ $(function() {
 	<!-- =================================================================================================================================== -->
 	
 	<span id="modal" style="background-color: white;">
-		<c:set var="list" value="${List }"/>
+		<c:set var="list" value="${member_code_session }"/>
 		<c:if test="${empty list }">
 			<img src="/project4/main_img/login.png" width="40px" height="40px" class="open_modal">	
 		</c:if>

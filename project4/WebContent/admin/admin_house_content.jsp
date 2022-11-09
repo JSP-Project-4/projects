@@ -117,7 +117,7 @@
 </style>
 </head>
 <body>
-<jsp:include page="../include/top2.jsp"/>
+<jsp:include page="/include/top.jsp"/>
 <c:set var="dto" value="${Cont }" />
 	<div id="title">${dto.getHouse_name() }&nbsp;&nbsp;상세내역</div>		
 		<div id="main">
@@ -296,6 +296,6 @@
 				</div>
 			</div>
 		</div>
-	<jsp:include page="../include/bottom.jsp"/>
+	<jsp:include page="/include/bottom.jsp"/>
 </body>
 </html>

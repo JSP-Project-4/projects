@@ -9,7 +9,7 @@
 <meta charset="UTF-8">
 <title>인증 코드</title>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.js"></script>
-<script type="text/javascript" src="JS/loginscript.js"></script>
+<script type="text/javascript" src="/project4/JS/loginscript.js"></script>
 <style type="text/css">
 
 #email_token {
@@ -52,7 +52,7 @@
 </style>
 </head>
 <body>
-<jsp:include page="../include/top2.jsp"/>
+<jsp:include page="/include/top.jsp"/>
 
 	<div align="center" id="email_token">
 		<p id="email_token_text">이메일 인증번호 입력하기</p>
@@ -67,6 +67,6 @@
 		</form>
 	</div>
 	
-<jsp:include page="../include/bottom.jsp"/>
+<jsp:include page="/include/bottom.jsp"/>
 </body>
 </html>

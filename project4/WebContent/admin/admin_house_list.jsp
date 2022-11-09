@@ -56,7 +56,7 @@ pageEncoding="UTF-8"%>
 </style>
 </head>
 <body>
-   <jsp:include page="../include/top2.jsp"/>
+   <jsp:include page="/include/top.jsp"/>
    <div id="box">
       <table id="list">
          <tr>
@@ -202,7 +202,7 @@ pageEncoding="UTF-8"%>
 		</div>
       </div>
    
-   <jsp:include page="../include/bottom.jsp"/>
+   <jsp:include page="/include/bottom.jsp"/>
    
 </body>
 </html>

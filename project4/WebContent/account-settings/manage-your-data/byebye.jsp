@@ -21,6 +21,10 @@
 	}
 </script>
 <body onload="noBack();" onpageshow="if(event.persisted) noBack();" onunload="deletion.jsp">
-	뒤로가기 막기 완료
+	<jsp:include page="/include/top.jsp"></jsp:include>
+	<div>
+		그동안 이용해 주셔서 감사합니다.
+	</div>
+	<jsp:include page="/include/bottom.jsp"></jsp:include>
 </body>
 </html>

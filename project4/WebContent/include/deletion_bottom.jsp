@@ -5,7 +5,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
 <title>Insert title here</title>
 <style type="text/css">
 	#deletion-page {
@@ -21,6 +20,7 @@
 			<a id="deletion-page">뒤로</a>
 					
 			<button id="member-delete-btn">다음</button>
+			
 		</td>
 	</tr>
 </body>

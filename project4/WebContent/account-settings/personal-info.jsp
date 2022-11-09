@@ -19,6 +19,7 @@
 </style>
 </head>
 <body>
+	<jsp:include page="/include/top.jsp" />
 	<div align="center" class="childdiv">
 		<h4>개인 > 개인정보</h4>
 	</div>
@@ -234,5 +235,6 @@
 			</tr> -->
 		</table>
 	</div>
+	<jsp:include page="/include/bottom.jsp" />
 </body>
 </html>

@@ -18,13 +18,9 @@ $(function() {
 	}	
 	
 	
-	$("checkinbtn").on("click", function() {
-		StartCalendar();
-		EndCalendar();
-	});
-	
 	$("#startDate").hide();
 	$("#endDate").hide();
+	$(".button.btnBorder").hide();
 	
 	$("#checkinbtn").on("click", function() {
 		$("#startDate").toggle();
@@ -43,16 +39,32 @@ function searchToggle(obj, evt){
 	        if(!container.hasClass('active')){ // 돋보기
 	            container.addClass('active');
 	            evt.preventDefault();
-
+				
+				
+				$(".button.btnBorder").show();
 	           	$("#clickbtn").on("click", function() {
 					var text = $(".search-input").val();
-					
 					
    					var hostIndex = location.href.indexOf( location.host ) + location.host.length;
     				var request = location.href.substring( hostIndex, location.href.indexOf('/', hostIndex + 1) );
 
+					if(text != null) {
+						location.href=request + "/topSearch.do?content=" + text;
+					}
 					
-					location.href=request + "/topSearch.do?content=" + text;
+				});
+				
+				$(".search-input").on("keyup", function(e) {
+					if(e.keyCode == 13) {
+						var text = $(".search-input").val();
+					
+					
+	   					var hostIndex = location.href.indexOf( location.host ) + location.host.length;
+	    				var request = location.href.substring( hostIndex, location.href.indexOf('/', hostIndex + 1) );
+	
+						
+						location.href=request + "/topSearch.do?content=" + text;
+					}
 				});
 	        }
 	        else if(container.hasClass('active') && $(obj).closest('.input-holder').length == 0){
@@ -60,7 +72,7 @@ function searchToggle(obj, evt){
 	            container.removeClass('active');
 	            // clear input
 	            container.find('.search-input').val('');
-	            
+	            $(".button.btnBorder").hide();
 	        }
 	}	
 	

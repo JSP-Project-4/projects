@@ -26,6 +26,7 @@
 </style>
 </head>
 <body>
+	<jsp:include page="/include/top.jsp"></jsp:include>
 	<div align="center">
 		<c:set var="list" value="${pmember }" />
 		<h2>계정</h2>
@@ -54,7 +55,7 @@
 				</td>
 				
 				<td>
-					<a href="login-and-security" class="information" >
+					<a href="account-settings/login-and-security" class="information" >
 						<div class="_1uwb2q9">
 							<div style="margin-bottom: 16px;" id="1" class="box">
 								<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; height: 32px; width: 32px; fill: currentcolor;">
@@ -182,5 +183,6 @@
 			</tr>
 		</table>
 	</div>
+	<jsp:include page="/include/bottom.jsp"></jsp:include>
 </body>
 </html>

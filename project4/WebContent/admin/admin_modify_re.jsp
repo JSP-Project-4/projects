@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<jsp:include page="../include/top2.jsp"/>
+<jsp:include page="/include/top.jsp"/>
 	<div align="center">
 	<c:set var="dto" value="${modify }"/>
 		<hr width="50%" color="gray">
@@ -152,6 +152,6 @@
 			</table>
 		</form>
 	</div>
-	<jsp:include page="../include/bottom.jsp"/>
+	<jsp:include page="/include/bottom.jsp"/>
 </body>
 </html>

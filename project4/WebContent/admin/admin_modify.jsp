@@ -135,7 +135,7 @@
 </head>
 
 <body>
-<jsp:include page="../include/top2.jsp" />
+<jsp:include page="/include/top.jsp" />
 <c:set var="dto" value="${modify }"/>
 <div id="write_title">${dto.getHouse_name()} 숙소 수정</div>
 <%-- enctype : 파일을 업로드하기 위한 속성 --%>
@@ -328,6 +328,6 @@
 	});
 </script>
 
-<jsp:include page="../include/bottom.jsp" />
+<jsp:include page="/include/bottom.jsp" />
 </body>
 </html>
