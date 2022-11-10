@@ -3,6 +3,7 @@
  */
 
 $(function() {
+	$("#hidebtn").hide();
 	
 	function searchToggle(obj, evt){
 	    var container = $(obj).closest('.search-wrapper');
@@ -43,15 +44,21 @@ function searchToggle(obj, evt){
 				
 				$(".button.btnBorder").show();
 	           	$("#clickbtn").on("click", function() {
-					var text = $(".search-input").val();
-					
-   					var hostIndex = location.href.indexOf( location.host ) + location.host.length;
-    				var request = location.href.substring( hostIndex, location.href.indexOf('/', hostIndex + 1) );
-
-					if(text != null) {
-						location.href=request + "/topSearch.do?content=" + text;
-					}
-					
+	           		$("#clickbtn").hide();
+	           		$("#hidebtn").show();
+	           		
+	           		$("#hidebtn").on("click", function() {
+						var text = $(".search-input").val();
+						
+	   					var hostIndex = location.href.indexOf( location.host ) + location.host.length;
+	    				var request = location.href.substring( hostIndex, location.href.indexOf('/', hostIndex + 1) );
+						
+						
+						if(text != null) {
+							location.href=request + "/topSearch.do?content=" + text;
+						}
+	           		});
+						
 				});
 				
 				$(".search-input").on("keyup", function(e) {
@@ -73,6 +80,8 @@ function searchToggle(obj, evt){
 	            // clear input
 	            container.find('.search-input').val('');
 	            $(".button.btnBorder").hide();
+	            $("#hidebtn").hide();
+	            $("#clickbtn").show();
 	        }
 	}	
 	

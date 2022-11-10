@@ -75,6 +75,7 @@ $(function() {
 		        <!-- <input type="text" class="search-input" />  -->
 		        <button class="search-icon" onclick="searchToggle(this, event);">
 		        	<span id="clickbtn"></span>
+		        	<span id="hidebtn"></span>
 		        </button>
 			    <input type="text" class="search-input" name="searchContent" id="searchId">
 		    </div>
